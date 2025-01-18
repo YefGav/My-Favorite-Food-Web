@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paella Valenciana - Receta Tradicional</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">PAELLA VALENCIANA</h1>
+    </header>
+
+    <div class="banner">
+        <img src="/api/placeholder/1200/400" alt="Paella Valenciana" class="banner__image">
+    </div>
+
+    <main class="main-content">
+        <section class="ingredients">
+            <h2>INGREDIENTS</h2>
+            <div class="ingredients__list">
+                <label class="checkbox-container">
+                    <input type="checkbox"> Arroz bomba (500g)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox"> Pollo troceado (400g)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox"> Conejo (300g)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox"> Judías verdes (200g)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox"> Garrofó (100g)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox"> Tomate rallado (2 unidades)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox"> Azafrán (1 sobre)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox"> Aceite de oliva virgen extra
+                </label>
+            </div>
+        </section>
+
+        <section class="time">
+            <h2>Time</h2>
+            <div class="time__display">
+                <div class="time__cook">
+                    <span class="time__icon">⏰</span>
+                    <span class="time__digits">45:00</span>
+                </div>
+                <div class="time__timer">
+                    <span class="time__icon">⌛</span>
+                    <span class="time__digits">0:00</span>
+                    <div class="time__buttons">
+                        <button data-time="5">5</button>
+                        <button data-time="10">10</button>
+                        <button data-time="15">15</button>
+                        <button data-time="20">20</button>
+                    </div>
+                    <button class="time__start">Start</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="preparation">
+            <h2>PREPARATION</h2>
+            <div class="preparation__steps">
+                <div class="step">
+                    <span class="step__number">1</span>
+                    <p class="step__text">Sofríe el pollo y el conejo en aceite de oliva hasta que estén dorados. Retira y reserva la carne.</p>
+                </div>
+                <div class="step">
+                    <span class="step__number">2</span>
+                    <p class="step__text">En el mismo aceite, añade las judías verdes y el garrofó. Cocina hasta que estén tiernos.</p>
+                </div>
+                <div class="step">
+                    <span class="step__number">3</span>
+                    <p class="step__text">Incorpora el tomate rallado y el azafrán. Cocina a fuego medio durante 5 minutos.</p>
+                </div>
+                <div class="step">
+                    <span class="step__number">4</span>
+                    <p class="step__text">Añade el arroz y remueve para que se impregne bien. Vierte el caldo caliente y cocina durante 20 minutos sin remover.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">Created by <a href="https://github.com/YefGav" target="_blank">YefGav</a> © 2025</p>
+        <div class="footer__social">
+            <a href="https://github.com/YefGav" target="_blank" class="social-icon github">
+                <img src="/api/placeholder/24/24" alt="GitHub">
+            </a>
+            <a href="#" class="social-icon linkedin">
+                <img src="/api/placeholder/24/24" alt="LinkedIn">
+            </a>
+            <a href="#" class="social-icon twitter">
+                <img src="/api/placeholder/24/24" alt="Twitter">
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/timer.js"></script>
+</body>
+</html>
