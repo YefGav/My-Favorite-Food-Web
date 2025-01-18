@@ -1,0 +1,22 @@
+@use 'variables';
+
+@mixin box-style {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: variables.$border-radius;
+  box-shadow: variables.$box-shadow;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-banner {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
