@@ -65,19 +65,18 @@
             </div>
           </div>
         </section>
-      </div>
 
         <section class="time">
             <h2>Tiempo de Preparación ⏲️</h2>
             <div class="timer">
-                <span>1:30</span>
+                <span id="time-display">1:30</span>
                 <div class="time-buttons">
-                    <button>5</button>
-                    <button>10</button>
-                    <button>15</button>
-                    <button>20</button>
+                    <button onclick="setTime(5)">5</button>
+                    <button onclick="setTime(10)">10</button>
+                    <button onclick="setTime(15)">15</button>
+                    <button onclick="setTime(20)">20</button>
                 </div>
-                <button>Start</button>
+                <button onclick="startTimer()">Start</button>
             </div>
         </section>
     </div>
@@ -118,6 +117,10 @@
 
     <footer>
         <p>&copy; <a href="https://github.com/YefGav" target="_blank">YefGav</a></p>
+        <div class="social-icons">
+            <!-- Iconos sociales aquí -->
+        </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

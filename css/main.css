@@ -30,6 +30,7 @@ header h1 {
   padding: 2em 0;
   height: 400px;
   overflow: hidden;
+  margin-bottom: -50px;
 }
 
 .banner img {
@@ -46,37 +47,32 @@ header h1 {
   padding: 1em;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  margin-top: -50px;
 }
 
 .ingredients {
-  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   background: #f0f0f0;
   padding: 1em;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.ingredients ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+.ingredients-column {
+  width: 48%;
 }
 
-.ingredients ul li {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 0.5em;
-  border-radius: 5px;
+.group {
   display: flex;
   align-items: center;
-}
-
-.ingredients ul li input {
-  margin-right: 1em;
+  margin-bottom: 0.5em;
 }
 
 .time {
-  width: 48%;
+  width: 45%;
 }
 
 .time .timer {
@@ -115,11 +111,11 @@ header h1 {
   padding: 1em;
   border-radius: 10px;
   color: #000000;
+  transition: transform 0.3s ease-in-out;
 }
-
-.preparation .step h3 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
+.preparation .step:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 footer {

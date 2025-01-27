@@ -46,6 +46,7 @@ header h1 {
   padding: 2em 0;
   height: 400px; // Establecer una altura fija para el contenedor
   overflow: hidden; // Ocultar el exceso de la imagen
+  margin-bottom: -50px; // Conexión visual más clara entre la imagen y los ingredientes
 }
 
 .banner img {
@@ -62,53 +63,39 @@ header h1 {
   padding: 1em;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  margin-top: -50px; // Conexión visual más clara entre la imagen y los ingredientes
 }
 
 .ingredients {
-  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; // Asegurar que ocupe el ancho completo disponible
   background: $ingredient-bg-color;
   padding: 1em;
-  border-radius: 0 0 10px 10px; // Bordes redondeados en la parte inferior
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Sombra para un efecto visual más claro
 }
 
-.ingredients ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+.ingredients-column {
+  width: 48%; // Ajustamos el ancho de cada columna
 }
 
-.ingredients ul li {
-  background: rgba(255, 255, 255, 0.8); // Fondo ligeramente transparente
-  padding: 0.5em;
-  border-radius: 5px;
+.group {
   display: flex;
   align-items: center;
-}
-
-.ingredients ul li input {
-  margin-right: 1em;
+  margin-bottom: 0.5em;
 }
 
 .time {
-  width: 48%;
-  background: $ingredient-bg-color;
-  padding: 1em;
-  border-radius: 0 0 10px 10px; // Bordes redondeados en la parte inferior
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 45%;
 }
 
 .time .timer {
-  width: 100%;
-  background: #fff;
-  padding: 1em;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
 }
 
 .time .timer span {
@@ -117,13 +104,8 @@ header h1 {
   font-family: 'Orbitron', sans-serif;
 }
 
-.time .timer .time-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 0.5em;
-}
-
 .time .timer button {
+  margin: 0.5em 0;
   padding: 0.5em 1em;
   background: $primary-color;
   color: $background-color;
@@ -132,35 +114,6 @@ header h1 {
   &:hover {
     background: darken($primary-color, 10%);
   }
-}
-
-.time .timer .start-button {
-  margin-top: 1em;
-  padding: 0.5em 2em;
-  font-size: 1em;
-  background: $primary-color;
-  color: $background-color;
-  border: none;
-  cursor: pointer;
-  &:hover {
-    background: darken($primary-color, 10%);
-  }
-}
-
-.time .timer .icon {
-  width: 32px;
-  height: 32px;
-  background-size: cover;
-  display: inline-block;
-  margin: 0 0.5em;
-}
-
-.time .timer .start-icon {
-  background-image: url('../assets/images/clock-icon-start.png');
-}
-
-.time .timer .stop-icon {
-  background-image: url('../assets/images/clock-icon-stop.png');
 }
 
 .preparation .steps-container {
@@ -174,11 +127,12 @@ header h1 {
   padding: 1em;
   border-radius: 10px;
   color: $secondary-color;
-}
+  transition: transform 0.3s ease-in-out; // Transición para la animación
 
-.preparation .step h3 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
+  &:hover {
+    transform: scale(1.05); // Aumenta ligeramente el tamaño
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Sombra
+  }
 }
 
 footer {
