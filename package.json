@@ -6,7 +6,6 @@
   "scripts": {
     "sass": "sass scss/main.scss css/main.css",
     "sass:watch": "sass --watch scss:css"
-    
   },
   "keywords": [],
   "author": "",
