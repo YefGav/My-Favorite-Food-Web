@@ -15,7 +15,7 @@ header {
   @include mixins.box-style;
   background-color: variables.$secondary-color;
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 2rem 0;
   margin-bottom: 1rem;
 }
@@ -29,16 +29,27 @@ header h1:hover {
   transform: scale(1.1);
 }
 
-.banner img {
-  @include mixins.responsive-banner;
-  border-radius: 5%
+// Contenedor de la imagen
+.image-container {
+  width: 100%;
+  height: auto; /* Asegúrate de que la altura sea automática */
+  overflow: hidden; /* Esconde el contenido que se desborda */
+}
+
+// Estilo para la imagen de la paella
+.paella-img {
+  margin-top: 0;
+  width: 100%;
+  height: auto; /* Mantener la proporción original de la imagen */
+  max-height: 400px; /* Ajusta esta altura máxima según sea necesario */
+  object-fit: cover; /* Ajusta la imagen para que ocupe todo el ancho y recorta el exceso de altura */
+  display: block; /* Asegura que no haya espacio en línea */
 }
 
 .container {
-  @include mixins.box-style;
   display: flex;
   justify-content: space-between;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   gap: 1rem;
 }
@@ -49,19 +60,14 @@ header h1:hover {
   flex: 1;
 }
 
-.ingredients ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.ingredients li {
-  margin-bottom: 0.5rem;
+.group {
   display: flex;
   align-items: center;
-}
+  margin-bottom: 1rem;
 
-.ingredients input[type="checkbox"] {
-  margin-right: 0.5rem;
+  input[type="checkbox"] {
+    margin-right: 1rem;
+  }
 }
 
 .timer {
@@ -76,18 +82,24 @@ header h1:hover {
   margin-bottom: 1rem;
 }
 
-.timer button {
-  padding: 0.5rem 1rem;
-  background-color: variables.$primary-color;
-  border: none;
-  color: #fff;
-  border-radius: variables.$border-radius;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+.time-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 
-.timer button:hover {
-  background-color: color.adjust(variables.$primary-color, $lightness: -10%);
+  button {
+    padding: 0.5rem 1rem;
+    background-color: variables.$primary-color;
+    border: none;
+    color: #fff;
+    border-radius: variables.$border-radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: color.adjust(variables.$primary-color, $lightness: -10%);
+    }
+  }
 }
 
 .preparation {
@@ -105,17 +117,21 @@ header h1:hover {
 
 .step {
   @include mixins.box-style;
-  flex: 1 1 calc(25% - 1rem);
+  flex: 1 1 calc(50% - 1rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.step h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: variables.$primary-color;
+.number-box {
+  background: #c4c4c4;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
 }
 
 footer {
