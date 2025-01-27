@@ -1,0 +1,210 @@
+// Importar fuentes de Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Francois+One&family=Road+Rage&display=swap');
+
+// Variables
+$font-family-main: 'Roboto', sans-serif;
+$font-family-header: 'Francois One', sans-serif;
+$font-family-banner: 'Road Rage', cursive;
+$primary-color: #ffcc00; // Color principal
+$secondary-color: #000000; // Color secundario
+$background-color: #ffffff; // Color de fondo
+$header-bg-color: #f8f8f8; // Color de fondo del encabezado
+$banner-bg-color: #eeeeee; // Color de fondo del banner
+$ingredient-bg-color: #f0f0f0; // Fondo gris claro para los ingredientes
+$footer-bg-color: #333;
+$footer-text-color: #fff;
+
+// Estilos globales
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-main;
+  background-color: $background-color;
+  color: $secondary-color;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header {
+  background: $header-bg-color;
+  color: $secondary-color;
+  padding: 2em 0;
+}
+
+header h1 {
+  font-family: $font-family-header;
+  font-size: 3em;
+  margin: 0;
+}
+
+.banner {
+  background: $banner-bg-color;
+  padding: 2em 0;
+  height: 400px; // Establecer una altura fija para el contenedor
+  overflow: hidden; // Ocultar el exceso de la imagen
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // Asegurarse de que la imagen mantenga su relación de aspecto
+  border: 5px solid $secondary-color;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; // Ajustar el margen para conectar las secciones
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingredients {
+  width: 48%;
+  background: $ingredient-bg-color;
+  padding: 1em;
+  border-radius: 0 0 10px 10px; // Bordes redondeados en la parte inferior
+}
+
+.ingredients ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ingredients ul li {
+  background: rgba(255, 255, 255, 0.8); // Fondo ligeramente transparente
+  padding: 0.5em;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.ingredients ul li input {
+  margin-right: 1em;
+}
+
+.time {
+  width: 48%;
+  background: $ingredient-bg-color;
+  padding: 1em;
+  border-radius: 0 0 10px 10px; // Bordes redondeados en la parte inferior
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time .timer {
+  width: 100%;
+  background: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.time .timer span {
+  font-size: 2em;
+  margin: 1em 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.time .timer .time-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.time .timer button {
+  padding: 0.5em 1em;
+  background: $primary-color;
+  color: $background-color;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
+
+.time .timer .start-button {
+  margin-top: 1em;
+  padding: 0.5em 2em;
+  font-size: 1em;
+  background: $primary-color;
+  color: $background-color;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
+
+.time .timer .icon {
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+.time .timer .start-icon {
+  background-image: url('../assets/images/clock-icon-start.png');
+}
+
+.time .timer .stop-icon {
+  background-image: url('../assets/images/clock-icon-stop.png');
+}
+
+.preparation .steps-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.preparation .step {
+  background: $primary-color;
+  padding: 1em;
+  border-radius: 10px;
+  color: $secondary-color;
+}
+
+.preparation .step h3 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+footer {
+  background: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 1em;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  color: $footer-text-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+footer .social-icons a {
+  color: $footer-text-color;
+  font-size: 1.5em;
+}
